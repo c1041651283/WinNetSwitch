@@ -28,9 +28,11 @@ namespace WinNetSwitch
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             SwitchNetStat switchNetStat = new SwitchNetStat();
+            WiFiConnect wiFiConnect = new WiFiConnect();
+
             if (switchNetStat.ChangeNetworkConnectionStatus(false, "VMware Network Adapter VMnet8"))
             {
-                Console.WriteLine("OK");
+                wiFiConnect.Connect("a","b");
             }
         }
 
